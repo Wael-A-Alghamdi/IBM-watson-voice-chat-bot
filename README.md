@@ -1,86 +1,75 @@
-* # مقدمة - Introduction
+# IBM Watson Voice Chat Bot
 
-**في هذا المشروع قمت بإنشاء محادثة صوتية مع الروبوت**
+A simple voice-based chatbot using IBM Watson cloud services. The system allows real-time voice-to-text and text-to-voice interaction using Python scripts.
 
-*In this project I created a voice chat with a bot*
+---
 
+## 🧾 Introduction | المقدمة
 
-**(txt) اولا:التحدث الى الروبوت والتحويل من صوت الى نص وحفظ النص في ملف**
+This project includes two main functions:
 
-*First: Talk to the robot and convert from voice to text and save the text in a file (txt)*
+1. **Speech to Text** – Convert spoken input into text and save it.
+2. **Text to Speech** – Convert a text response into an audio file.
 
+في هذا المشروع تم تطوير محادثة صوتية باستخدام IBM Watson:  
+- التحدث للروبوت وتحويل الصوت إلى نص.  
+- رد الروبوت بتحويل النص إلى صوت.
 
-**(mp3)ثانيا:الرد من الروبوت بالتحويل من نص الى صوت وحفظ الصوت ك**
+---
 
-*Second: Reply from the robot by converting from text to voice and saving the voice in (mp3)*
+## 🎙️ Part 1: Speech to Text | من خطاب إلى نص
 
-
-
-## 1.من خطاب إلى نص - From Speech to Text
-
-
-**(Visual Studio Code) و (Python) و لغة (IBM Watson Speech to Text) قمت بإستعمال**
-
-*I used (IBM Watson Speech to Text), (Python) and (Visual Studio Code)*
-
-
-
-**في البداية يقوم الشخص بالتحدث و يقوم الكود بتحويل الصوت الى نص ثم بعد انتهاء الحديث**
-
-**(output)اسم الملف(txt) يقوم بحفظ ما قاله الشخص في ملف**
-
-*In the beginning, the person speaks and the code converts the audio into text, and then after the end of the conversation, it saves what the person said in a file (txt) file name (output)*
-
-
-**ثم التحدث لمدة 10 ثواني و تستطيع تعديلها لأكثر او اقل (python transcribe.py -t 10) تقوم بكتابة**
-
-*You type(python transcribe.py -t 10) and then speak for 10 seconds and you can edit it for more or less*
-
-
-**ثم يقوم الكود بعد الانتهاء من الحديث في حفظه**
-
-*Then the code after the completion of the conversation to save it*
-
-
-**(txt) صور لتوضيح كود حفظ النص في ملف**
-
-*Pictures to show the code to save the text in a file (txt)*
-
-
-![](https://github.com/S0oos/IBM-watson-voice-chat-bot-internet-of-things-project-4/blob/main/Images/Screenshot_4.png)
-****
-![](https://github.com/S0oos/IBM-watson-voice-chat-bot-internet-of-things-project-4/blob/main/Images/Screenshot_3.png)
-****
-![](https://github.com/S0oos/IBM-watson-voice-chat-bot-internet-of-things-project-4/blob/main/Images/Screenshot_2.png)
-****
-![](https://github.com/S0oos/IBM-watson-voice-chat-bot-internet-of-things-project-4/blob/main/Images/Screenshot_1.png)
-
-## 2.من نص إلى خطاب - From Text to Speech
-
-**(Python)ولغة(IBM Watson Text to Speech)قمت بإستعمال**
-
-**لسهولة عمل هذا الجزء عليه(Jupyter python)ولكن هنا قمت بإستعمال**
-
-*I used (IBM Watson Text to Speech) and (Python) but here I used (Jupyter python) to make this part easier to work on*
-
-
-**(winston) اسم ملف الصوت(mp3)يقوم الكود بتحويل النص (الرد على الشخص) الى صوت وحفظه ك**
-
-*The code converts the text (responding to the person) to audio and saves it as (mp3) Audio file name (winston)*
-
-
-**مكتوب داخل الكود وتحويله الى صوت كمثال بسيط (hello world) يقوم الكود في البداية في قراءة نص**
-
-*The code initially reads a text (hello world) written inside the code and converts it to sound as a simple example*
-
-
-**وتحويله الى صوت (example) هنا يقوم الكود في قراءة النص من ملف**
-
-*Here the code reads the text from a file (example) and converts it to audio*
+### 🔧 Tools Used  
+- Python  
+- IBM Watson Speech to Text API  
+- Visual Studio Code  
 
 
 
+The script records audio from the microphone for the specified number of seconds (default: 10).
 
+After recording, the voice is converted to text using IBM Watson.
 
+The text is saved automatically to a file called `output.txt`.
 
+---
 
+## 🔊 Part 2: Text to Speech | من نص إلى صوت
+
+### 🔧 Tools Used
+- Python  
+- IBM Watson Text to Speech API  
+- Jupyter Notebook
+
+### 📋 How it works
+- The script reads either a hardcoded message (like `"hello world"`) or content from `example.txt`.  
+- It uses IBM Watson to convert the text into an `.mp3` audio file.  
+- The generated file is saved as `winston.mp3`.
+
+---
+
+## 📁 Project Structure
+
+IBM-watson-voice-chat-bot/
+├── Speech to Text/
+│   ├── transcribe.py
+│   ├── setup.py
+│   ├── setup.cfg
+│   ├── speech.cfg
+│   └── output.txt
+├── Text to Speech/
+│   ├── Text-to-Speech.ipynb
+│   ├── example.txt
+│   ├── speech.mp3
+│   └── winston.mp3
+├── README.md
+
+---
+
+## 📌 Notes
+
+- You need an IBM Cloud account and API credentials.  
+- Place your API key and region inside the `speech.cfg` file.  
+- `transcribe.py` handles the voice recording and transcription.  
+- `Text-to-Speech.ipynb` converts any text into spoken audio.  
+- This project is intended for educational and demo use only.
