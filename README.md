@@ -4,7 +4,7 @@ A simple voice-based chatbot using IBM Watson cloud services. The system allows 
 
 ---
 
-## 🧾 Introduction | المقدمة
+##  Introduction | المقدمة
 
 This project includes two main functions:
 
@@ -17,9 +17,9 @@ This project includes two main functions:
 
 ---
 
-## 🎙️ Part 1: Speech to Text | من خطاب إلى نص
+##  Part 1: Speech to Text | من خطاب إلى نص
 
-### 🔧 Tools Used  
+###  Tools Used  
 - Python  
 - IBM Watson Speech to Text API  
 - Visual Studio Code  
@@ -34,21 +34,21 @@ The text is saved automatically to a file called `output.txt`.
 
 ---
 
-## 🔊 Part 2: Text to Speech | من نص إلى صوت
+##  Part 2: Text to Speech | من نص إلى صوت
 
-### 🔧 Tools Used
+###  Tools Used
 - Python  
 - IBM Watson Text to Speech API  
 - Jupyter Notebook
 
-### 📋 How it works
+###  How it works
 - The script reads either a hardcoded message (like `"hello world"`) or content from `example.txt`.  
 - It uses IBM Watson to convert the text into an `.mp3` audio file.  
 - The generated file is saved as `winston.mp3`.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 IBM-watson-voice-chat-bot/
 
@@ -78,7 +78,7 @@ IBM-watson-voice-chat-bot/
 
 ---
 
-## 📌 Notes
+##  Notes
 
 - You need an IBM Cloud account and API credentials.  
 - Place your API key and region inside the `speech.cfg` file.  
