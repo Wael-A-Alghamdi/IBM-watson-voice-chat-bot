@@ -51,17 +51,29 @@ The text is saved automatically to a file called `output.txt`.
 ## 📁 Project Structure
 
 IBM-watson-voice-chat-bot/
+
 ├── Speech to Text/
+
 │   ├── transcribe.py
+
 │   ├── setup.py
+
 │   ├── setup.cfg
+
 │   ├── speech.cfg
+
 │   └── output.txt
+
 ├── Text to Speech/
+
 │   ├── Text-to-Speech.ipynb
+
 │   ├── example.txt
+
 │   ├── speech.mp3
+
 │   └── winston.mp3
+
 ├── README.md
 
 ---
